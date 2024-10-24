@@ -3,7 +3,11 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const port = 3000
+const port = 3000;
+const swaggerJSDoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
+
+
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
