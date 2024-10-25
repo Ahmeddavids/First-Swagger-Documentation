@@ -8,7 +8,6 @@ const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
 
-
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
@@ -23,6 +22,30 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+const swaggerDefinition = {
+  openapi: '3.0.0',
+  info: {
+    title: 'First Swagger Documentation',
+    version: '1.0.0',
+    description:
+      'Swagger docs usage',
+    license: {
+      name: 'Licensed Under MIT',
+      url: 'https://spdx.org/licenses/MIT.html',
+    },
+    contact: {
+      name: 'Ahmed Davids',
+      url: 'https://jsonplaceholder.typicode.com',
+    },
+  },
+  servers: [
+    {
+      url: 'http://localhost:3000',
+      description: 'Development server',
+    },
+  ],
+};
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
