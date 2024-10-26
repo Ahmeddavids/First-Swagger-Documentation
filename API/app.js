@@ -56,9 +56,6 @@ const options = {
 const swaggerSpec = swaggerJSDoc(options);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-
-
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
