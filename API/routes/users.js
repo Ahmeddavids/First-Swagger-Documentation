@@ -59,7 +59,7 @@ router.get('/', function (req, res) {
  *          name: id
  *          required: true
  *          schema:
- *            type: string
+ *            type: number
  *     responses:
  *       200:
  *         description: A single user.
