@@ -100,6 +100,17 @@ router.get('/:id', function (req, res) {
  * /users:
  *   post:
  *     summary: Create a JSONPlaceholder user.
+ *     requestBody: 
+ *      required: true
+ *      content: 
+ *        application/json:
+ *          schema:
+ *            type: object
+ *            properties: 
+ *              name:
+ *                type: string
+ *                description: The user's name
+ *                example: Ahmed Davids
  *     responses:
  *       201:
  *         description: Created
